@@ -4,3 +4,5 @@ Participant,height (cm),weight (kg),gender,injury,level activity,activity of cho
 3 (kelly),165,54,Female,None,Moderate,Lifting
 4 (crystal),160,60,Female,None,Low,Walking
 5 (jeffery),190,90,Male,None,Low,Running
+6 (elma),167,54,Female,None,Low,Walking
+7 (adam),189,77,Male,None,Moderate,Running

@@ -1,9 +1,9 @@
-Participant,height (cm),weight (kg),gender,injury,level activity,activity of choice
-1 (daniel),195,80,Male,None,Moderate,Running
-2 (steven),179,77,Male,None,Moderate,Lifting
-3 (kelly),165,54,Female,None,Moderate,Lifting
-4 (crystal),160,60,Female,None,Low,Walking
-5 (jeffery),190,90,Male,None,Low,Running
+Participant,height (cm),weight (kg),gender,injury,level activity,activity of choice,age
+1 (daniel),195,80,Male,None,Moderate,Running,21
+2 (steven),179,77,Male,None,Moderate,Lifting,21
+3 (kelly),165,54,Female,None,Moderate,Lifting,23
+4 (crystal),160,60,Female,None,Low,Walking,48
+5 (jeffery),190,90,Male,None,Low,Running,22
 6 (elma),167,54,Female,None,Low,Walking
 7 (adam),189,77,Male,None,Moderate,Running
 8 (henry),181,70,Male,None,Moderate,Running

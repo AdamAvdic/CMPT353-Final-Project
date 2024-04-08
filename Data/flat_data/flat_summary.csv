@@ -1,20 +1,20 @@
-"Participant","Age"," height (cm)","gender","weight (kg)","injury","level of activity","activity of choice"
-"1 (olivia)","21","160","Female","66","None","Moderate","Swimming"
-"2 (nicole)","45","152","Female","54","None","High","Swimming"
-"3 (tiffany)","22","156.5","Female","60","None","Moderate","Running"
-"4 (clair)","20","172.7","Female","54.4","None","High","Boxing"
-"5 (paul)","18","177.8","Male","90.7","None","High","Lacrosse"
-"6 (kacey)","10","127","Female","26","None","High","Soccer"
-"7 (bryan)","45","177.8","Male","84.8","Back","Moderate","Work"
-"8 (ryan)","22","185.4","Male","118","Knee/meniscus","Moderate","Work"
-"9 (timothy)","49","177.8","Male","113","Knee/meniscus","High","Hiking"
-"10 (alex)","23","178","Male","62","None","Low","Walking"
-"11 (sarah)","23","172","Female","54","None","Low","Walking"
-"12 (trevor)","22","178","Male","62","None","Moderate","Soccer"
-"13 (sage)","55","162","Female","65","Back","Low","Sitting"
-"14 (thomas)","21","175","Male","60","None","Moderate","Walking"
-"15 (nathan)","22","178","Male","62","None","Low","Biking"
-"16 (danial)","25","174","Male","62","None","Low","Walking"
-"17 (rebecca)","21","155","Female","58","None","Moderate","Kickboxing"
-"18 (anthony)","23","177","Male","71","None","Moderate","Soccer"
+Participant,Age,height (cm),gender,weight (kg),injury,level of activity,activity of choice
+1 (olivia),21,160,Female,66,None,Moderate,Swimming
+2 (nicole),45,152,Female,54,None,High,Swimming
+3 (tiffany),22,156.5,Female,60,None,Moderate,Running
+4 (clair),20,172.7,Female,54.4,None,High,Boxing
+5 (paul),18,177.8,Male,90.7,None,High,Lacrosse
+6 (kacey),10,127,Female,26,None,High,Soccer
+7 (bryan),45,177.8,Male,84.8,Back,Moderate,Work
+8 (ryan),22,185.4,Male,118,Knee/meniscus,Moderate,Work
+9 (timothy),49,177.8,Male,113,Knee/meniscus,High,Hiking
+10 (alex),23,178,Male,62,None,Low,Walking
+11 (sarah),23,172,Female,54,None,Low,Walking
+12 (trevor),22,178,Male,62,None,Moderate,Soccer
+13 (sage),55,162,Female,65,Back,Low,Sitting
+14 (thomas),21,175,Male,60,None,Moderate,Walking
+15 (nathan),22,178,Male,62,None,Low,Biking
+16 (danial),25,174,Male,62,None,Low,Walking
+17 (rebecca),21,155,Female,58,None,Moderate,Kickboxing
+18 (anthony),23,177,Male,71,None,Moderate,Soccer
 

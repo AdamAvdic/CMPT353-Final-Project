@@ -24,7 +24,7 @@ OUTPUT_TEMPLATE_REGRESS = (
 )
 
 
-# Used for the ML model for prediciting participants gender. height, weight
+# Used for the ML model for prediciting participants gender, height, weight
 def ML_classifier(X,y):
 
     X_train, X_test, y_train, y_test = train_test_split(X,y)

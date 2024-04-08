@@ -7,3 +7,6 @@ Participant,height (cm),weight (kg),gender,injury,level activity,activity of cho
 6 (elma),167,54,Female,None,Low,Walking
 7 (adam),189,77,Male,None,Moderate,Running
 8 (henry),181,70,Male,None,Moderate,Running
+9 (nancy), 157,67,Female,None,High,Work
+10 (john), 162,65,Male,Ankle/achillies,High,Work
+

@@ -1,12 +1,12 @@
-Participant,height (cm),weight (kg),gender,injury,level activity,activity of choice,age
-1 (daniel),195,80,Male,None,Moderate,Running,21
-2 (steven),179,77,Male,None,Moderate,Lifting,21
-3 (kelly),165,54,Female,None,Moderate,Lifting,23
-4 (crystal),160,60,Female,None,Low,Walking,48
-5 (jeffery),190,90,Male,None,Low,Running,22
-6 (elma),167,54,Female,None,Low,Walking
-7 (adam),189,77,Male,None,Moderate,Running
-8 (henry),181,70,Male,None,Moderate,Running
-9 (nancy), 157,67,Female,None,Moderate,Work
-10 (john), 162,65,Male,Ankle/achillies,Moderate,Work
+Participant,age,height (cm),weight (kg),gender,injury,level activity,activity of choice
+1 (daniel),21,195,80,Male,None,Moderate,Running
+2 (steven),21,179,77,Male,None,Moderate,Lifting
+3 (kelly),23,165,54,Female,None,Moderate,Lifting
+4 (crystal),48,160,60,Female,None,Low,Walking
+5 (jeffery),22,190,90,Male,None,Low,Running
+6 (elma),idk,167,54,Female,None,Low,Walking
+7 (adam),21,189,77,Male,None,Moderate,Running
+8 (henry),21,181,70,Male,None,Moderate,Running
+9 (nancy),60,157,67,Female,None,Moderate,Work
+10 (john),60,162,65,Male,Ankle/achillies,Moderate,Work
 

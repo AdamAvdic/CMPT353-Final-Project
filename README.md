@@ -1,5 +1,15 @@
 # CMPT353-Final-Project
-
+HOW TO RUN THE PROJECT:
+1) MAKE SURE THE FOLLOWING PACKAGES ARE INSTALLED WITH EITHER PIP OR PIP3
+pip install pandas
+pip install numpy
+pip install matplotlib
+pip install scipy
+pip install scikit-learn
+pip install statsmodels
+pip install seaborn
+2) run python dataAnalysis.py or python flat_analyisis.py depending on which file you want to run.
+   
 Project Topic: Sensors, Noise, and Walking
 Most of us are carrying an amazing collection of sensors in our pocket right now. Every smartphone has many sensors available, including a 3D accelerometer. Can we use the accelerometers on our phones to tell us something about our users' gait?
 

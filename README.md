@@ -16,7 +16,7 @@ pip install statsmodels
 
 pip install seaborn
 
-3) run python dataAnalysis.py or python flat_analyisis.py depending on which file you want to run.
+2) run python dataAnalysis.py or python flat_analyisis.py depending on which file you want to run.
    
 Project Topic: Sensors, Noise, and Walking
 Most of us are carrying an amazing collection of sensors in our pocket right now. Every smartphone has many sensors available, including a 3D accelerometer. Can we use the accelerometers on our phones to tell us something about our users' gait?

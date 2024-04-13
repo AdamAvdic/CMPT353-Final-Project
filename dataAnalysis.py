@@ -208,78 +208,54 @@ def xy_peak_pairs(dir, file_ext, n):
 
 def main():
 
-    # left leg and right leg on flat ground
+    #STEVEN
     print("Analysis (stairs) Steven")
-    right = analyzePeaks('Data/Steven', 'r', 3, 'euclid')
-    left = analyzePeaks('Data/Steven', 'l', 3, 'euclid')
+    right_h = analyzePeaks('Data/Steven', 'r', 1, 'euclid')  # Assuming r2 is a specific file
+    left_h = analyzePeaks('Data/Steven', 'l', 1, 'euclid')   # Assuming l1 is a specific file
     
-    plt.plot(right.freq, right.acceleration, 'go', label='right leg')
-    plt.plot(left.freq, left.acceleration, 'bo', label='left leg')
-    plt.title('Left and Right leg Characteristic Frequencies')
+    # Concatenate and label data for Steven's flat ground analysis
+    flat_ground_data_h = pd.concat([right_h, left_h])
+    flat_ground_data_h['label'] = 'flat'
+    
+    # Analysis for Steven's stairs folder
+    right_s_h = analyzePeaks('Data/Steven/stairs', 'r', 2, 'euclid')
+    left_s_h = analyzePeaks('Data/Steven/stairs', 'l', 2, 'euclid')
+    
+    # Concatenate and label stair data for Steven
+    stair_data_h = pd.concat([right_s_h, left_s_h])
+    stair_data_h['label'] = 'stairs'
+    
+    # X vs Y frequency comparisons for Steven, main folder
+    xy_right_h = xy_peak_pairs('Data/Steven', 'r', 1)
+    xy_left_h = xy_peak_pairs('Data/Steven', 'l', 1)
+    
+    # Concatenate XY data for flat ground comparison
+    xy_ground_data_h = pd.concat([xy_right_h, xy_left_h])
+    xy_ground_data_h['label'] = 'flat'
+    
+    # X vs Y frequency comparisons for Steven, stairs folder
+    xy_right_s_h = xy_peak_pairs('Data/Steven/stairs', 'r', 2)
+    xy_left_s_h = xy_peak_pairs('Data/Steven/stairs', 'l', 2)
+    
+    # Concatenate XY data for stairs comparison
+    xy_stair_data_h = pd.concat([xy_right_s_h, xy_left_s_h])
+    xy_stair_data_h['label'] = 'stairs'
+    
+    plt.figure()
+    plt.plot(xy_ground_data_h.xfreq, xy_ground_data_h.yfreq, 'go', label='ground')
+    plt.plot(xy_stair_data_h.xfreq, xy_stair_data_h.yfreq, 'bo', label='stairs')
     plt.legend()
-    plt.xlabel('freq')
-    
-    right['label'] = 'right'
-    left['label'] = 'left'
-    
-    flat_ground_data = pd.concat([right, left])
-    print("Left leg vs right leg classification:")
-    ML_classifier(flat_ground_data[['freq', 'acceleration']].values, flat_ground_data['label'].values)
-    
-    # left leg and right leg on stairs
-    right_s = analyzePeaks('Data/Steven/stairs', 'r', 2, 'euclid')
-    left_s = analyzePeaks('Data/Steven/stairs', 'l', 2, 'euclid')
-    stair_data = pd.concat([right_s, left_s])
-    stair_data['label'] = 'stairs'
-    
-    plt.figure()
-    plt.plot(flat_ground_data.freq, flat_ground_data.acceleration, 'go', label='ground')
-    plt.plot(stair_data.freq, stair_data.acceleration, 'bo', label='stairs')    
-    plt.legend()    
-    plt.title('Stairs vs Flat Ground')
-    plt.xlabel('freq')
-    
-    flat_ground_data['label'] = 'flat'    
-    my_walking_data = pd.concat([stair_data, flat_ground_data])
-    print("Ground vs Stairs classification")    
-    ML_classifier(my_walking_data[['freq', 'acceleration']].values, my_walking_data['label'].values)
-    
-    
-    # x vs y frequency comparisons
-    print("x vs y")
-    xy_left = xy_peak_pairs('Data/Steven', 'l', 3)
-    xy_right = xy_peak_pairs('Data/Steven', 'r', 3)
-    
-    plt.figure()
-    plt.plot(xy_right.xfreq, xy_right.yfreq, 'go', label='right leg')
-    plt.plot(xy_left.xfreq, xy_left.yfreq, 'bo', label='left leg')
-    plt.title('Left and Right leg Characteristic Frequencies x vs y')
-    plt.legend()
-    plt.xlabel('freq')
-    plt.ylabel('yfreq')
-    
-    xy_right['label'] = 'right'
-    xy_left['label'] = 'left'
-    xy_ground_data = pd.concat([xy_right, xy_left])
-    ML_classifier(xy_ground_data[['xfreq', 'yfreq']].values, xy_ground_data['label'].values)
-    
-    # Stairs
-    xy_right_s = xy_peak_pairs('Data/Steven/stairs', 'r', 2)
-    xy_left_s = xy_peak_pairs('Data/Steven/stairs', 'l', 2)
-    xy_stair_data = pd.concat([xy_right_s, xy_left_s])
-    xy_stair_data['label'] = 'stairs'
-    
-    plt.figure()
-    plt.plot(xy_ground_data.xfreq, xy_ground_data.yfreq, 'go', label='ground')
-    plt.plot(xy_stair_data.xfreq, xy_stair_data.yfreq, 'bo', label='stairs')    
-    plt.legend()    
     plt.title('Steven: Stairs vs Flat Ground')
     plt.xlabel('xfreq')
     plt.ylabel('yfreq')
+
+    # Concatenate XY data for Steven, labeling for classification
+    xy_ground_data_h['label'] = 'flat'
+    xy_walking_data_h = pd.concat([xy_stair_data_h, xy_ground_data_h])
     
-    xy_ground_data['label'] = 'flat'    
-    xy_walking_data = pd.concat([xy_stair_data, xy_ground_data])   
-    ML_classifier(xy_walking_data[['xfreq', 'yfreq']].values, xy_walking_data['label'].values)
+    # Machine Learning classifier applied to Steven's data
+    print("Steven - Ground vs Stairs classification based on XY frequency data:")
+    ML_classifier(xy_walking_data_h[['xfreq', 'yfreq']].values, xy_walking_data_h['label'].values)
 	
     plt.show()
 
